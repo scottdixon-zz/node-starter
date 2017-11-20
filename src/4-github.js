@@ -1,6 +1,16 @@
-const github = require('../api/github')
+const github = require('./api/github')
 
+// Get all repos of someone
 github.reposBy('facebook')
+  .then(res => {
+    const repos = res.data
+    console.log(`Found ${repos.length} repos:`)
+    repos.forEach(repo => {
+      console.log(`${repo.name}`)
+    })
+  })
+
+github.reposBy('Microsoft')
   .then(res => {
     const repos = res.data
     console.log(`Found ${repos.length} repos:`)
@@ -18,3 +28,36 @@ Challenges:
 3. Add function to `src/api/github` to list all the issues for a particular repo [https://developer.github.com/v3/issues/#list-issues]. Add examples to load and display key info for repos 'facebook/react' and 'Microsoft/vscode'
 
 */
+
+// Get specific repo by owner and name
+github.getRepo('Microsoft','vscode')
+  .then(res => {
+    const repo = res.data
+    console.log('Extracting data...')
+    console.log(`Repo owner: ${repo.owner.login}`)
+    console.log(`Name: ${repo.name}`)
+    console.log(`Description: ${repo.description}`)
+    console.log('-------------------')
+  })
+
+github.getRepo('Facebook','react')
+  .then(res => {
+    const repo = res.data
+    console.log('Extracting data...')
+    console.log(`Repo owner: ${repo.owner.login}`)
+    console.log(`Name: ${repo.name}`)
+    console.log(`Description: ${repo.description}`)
+    console.log('-------------------')
+  })
+
+// Retrieve contents of README.md from someone's specific repo
+  github.getReadMe('Facebook','react')
+    .then(res => {
+      console.log(res.data)
+    })
+
+  github.getIssues('Facebook','react')
+    .then(res => {
+      const issues = res.data
+      console.log(issues)
+    })
