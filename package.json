@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "axios": "^0.17.0",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "prompt": "^1.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
