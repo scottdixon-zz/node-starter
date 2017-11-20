@@ -9,15 +9,22 @@ function convertFahrenheitToCelsius(fahrenheit) {
 function formatCelsius(value) {
     return (Math.round(value) + '°C');
 };
-
+function formatFahrenheit(value) {
+  return (Math.round(value) + '°F');
+}
+// challenge 3
+ var array = [12, 23, 4];
+ function hottestTemperature(Math, array) {
+   return Math.max.apply(Math, array);
+ }
+  console.log(hottestTemperature(Math, array));
 // Monday
 const mondayTemperature = 100 //fahrenheit
 //Test convertFahrenheitToCelsius function
 let celsius = formatCelsius(convertFahrenheitToCelsius(mondayTemperature))
 console.log(`On Monday it is ${celsius} `)
-fahrenheit = convertCelsiusToFahrenheit(mondayTemperature)
-
-console.log(`The Americans would think of that as ${fahrenheit}°F`)
+fahrenheit = formatFahrenheit(convertCelsiusToFahrenheit(mondayTemperature))
+console.log(`The Americans would think of that as ${fahrenheit}`)
 
 // Tuesday
 
@@ -37,7 +44,7 @@ console.log(`The Americans would think of that as ${fahrenheit}°F`)
 
 Challenges:
 1. Add Fahrenheit to Celsius converter (`function convertFahrenheitToCelsius`) with examples of  Done
-2. Add `formatCelsius` function that rounds to whole number using `Math.round`, and adds '°C' on end
+2. Add `formatCelsius` function that rounds to whole number using `Math.round`, and adds '°C' on end Done
 3. Add `hottestTemperature` function, which takes an array of temperatures, and returns the highest one
 
 */
