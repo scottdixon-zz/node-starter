@@ -1,13 +1,58 @@
-const github = require('../api/github')
+const github = require('./api/github')
 
-github.reposBy('facebook')
-  .then(res => {
-    const repos = res.data
-    console.log(`Found ${repos.length} repos:`)
-    repos.forEach(repo => {
-      console.log(`${repo.name}`)
-    })
-  })
+  // github.reposBy('facebook')
+  //   .then(res => {
+  //     const repos = res.data
+  //     console.log(`Found ${repos.length} repos:`)
+  //     repos.forEach(repo => {
+  //       console.log(`${repo.name}`)
+  //     })
+  //   })
+
+  // github.repo('facebook', 'react')
+  //   .then(res => {
+  //     const repos = res.data
+  //     console.log(repos)
+  // })
+  //
+  // github.issues('facebook', 'react')
+  //   .then(res => {
+  //     const issues = res.data
+  //     console.log(`Found ${issues.length} Issues:`)
+  //     issues.forEach(issue => {
+  //       console.log(`${issue.title}`)
+  //     })
+  // })
+
+  // github.reposBy('Microsoft')
+  //   .then(res => {
+  //     const repos = res.data
+  //     console.log(`Found ${repos.length} repos:`)
+  //     repos.forEach(repo => {
+  //       console.log(`${repo.name}`)
+  //     })
+  //   })
+  //
+  // github.repo('Microsoft', 'vscode')
+  //   .then(res => {
+  //     const repos = res.data
+  //     console.log(repos)
+  // })
+  //
+  // github.getReadMe('Microsoft', 'vscode')
+  //   .then(res => {
+  //     const repos = res.data.content
+  //     console.log(repos)
+  // })
+  //
+  // github.issues('Microsoft', 'vscode')
+  //   .then(res => {
+  //     const issues = res.data
+  //     console.log(`Found ${issues.length} Issues:`)
+  //     issues.forEach(issue => {
+  //       console.log(`${issue.title}`)
+  //     })
+  // })
 
 /*
 
