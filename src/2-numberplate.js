@@ -1,4 +1,9 @@
 function formatVanityPlate(string) {
+  //challenge 3
+  string.length > 12 ? string = string.substring(0, 12) : string
+  // if (string.length > 12) {
+  //   return string = string.substring(0, 12)
+  // }
   let words = string.split(' ')
   words = words.map(word => word.toUpperCase())
   return words.join('')
@@ -6,10 +11,12 @@ function formatVanityPlate(string) {
 
 const one = 'I like money'
 console.log(`Number plate: ${ formatVanityPlate(one) }`)
-
-const two = 'Cats for life'
-console.log(`Number plate: ${ formatVanityPlate(two) }`)
-
+//challenge 1
+const two = 'Cats for life'.replace('for', '4')
+console.log(`Number plate: ${ formatVanityPlate(two)}`)
+//challenge 2
+const three = 'bad to the bone'.replace('to', '2')
+console.log(`Number plate: ${ formatVanityPlate(three)}`)
 
 /*
 
